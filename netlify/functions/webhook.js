@@ -1,7 +1,7 @@
 const fetch = require('node-fetch'); // Use the CommonJS version of node-fetch
 
 exports.handler = async function(event, context) {
-  const AIRTABLE_API_URL = "https://api.airtable.com/v0/appjPgePDpZx1YFDK/tbloS2feAtDFqo6Mq";
+  const AIRTABLE_API_URL = "https://api.airtable.com/v0/appwv6xb2EpGPQI2n/tbloS2feAtDFqo6Mq";
   const AIRTABLE_API_KEY = process.env.api; // Replace with your actual API key
 
   console.log('Received event:', event); // Log the incoming event data
@@ -40,6 +40,8 @@ exports.handler = async function(event, context) {
       };
 
       console.log('Sending data to Airtable:', airtableData); // Log data being sent to Airtable
+      console.log('API Key present:', !!AIRTABLE_API_KEY); // Check if API key exists
+      console.log('API URL:', AIRTABLE_API_URL); // Log the API URL
 
       const response = await fetch(AIRTABLE_API_URL, {
         method: 'POST',
