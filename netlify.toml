@@ -1,0 +1,5 @@
+[build]
+  functions = "netlify/functions"  # Directory where your functions are located
+
+[dev]
+  functions = "netlify/functions"  # Directory where your functions are located
