@@ -35,7 +35,7 @@ exports.handler = async function(event, context) {
           "Company ID Used": companyId,
           "UserType": userType ,
           "User": validUer,// Add UserType to Airtable data
-          "Membership Status": companyId ? "Member" : "Non-member"
+          "Membership Status": companyId ? "Member" : "Non-Member"
         }
       };
 
