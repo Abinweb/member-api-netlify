@@ -22,7 +22,7 @@ exports.handler = async function(event, context) {
       // Determine UserType based on the presence of companyId
       const userType = companyId ? "Member" : "Non-Member";
 
-      const validUserOptions = ["Associate", "Affiliate", "Builder"]; // Match Airtable options
+      const validUserOptions = ["Associate", "Affiliate", "Builder", "BIAW staff", "Executive Officers"]; // Match Airtable options
       const validUer = validUserOptions.includes(uer) ? uer : null; // Only accept valid options
 
       const airtableData = {
